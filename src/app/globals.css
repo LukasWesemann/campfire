@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-gradient: radial-gradient(circle at 20% 20%, #3b2f2f, #0f172a 60%);
+}
+
+body {
+  color: #f8fafc;
+  background: var(--background-gradient);
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.button-primary {
+  @apply rounded-lg bg-campfire-orange px-4 py-2 font-semibold text-slate-900 shadow-soft transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.button-secondary {
+  @apply rounded-lg border border-campfire-amber/60 px-3 py-2 text-sm font-semibold text-campfire-amber transition hover:bg-campfire-amber hover:text-campfire-slate;
+}
+
+.card {
+  @apply rounded-2xl bg-white/5 p-4 shadow-soft backdrop-blur;
+}
+
+.tile {
+  @apply flex items-center justify-center rounded-xl border border-white/5 bg-white/5 text-2xl transition hover:bg-white/10;
+}
+
+.fire-glow {
+  box-shadow: 0 0 20px rgba(255, 122, 60, 0.6), 0 0 60px rgba(244, 184, 96, 0.35);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 0.35rem;
+}
